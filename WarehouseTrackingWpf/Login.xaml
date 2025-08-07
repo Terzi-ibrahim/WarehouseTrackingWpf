@@ -22,32 +22,22 @@
 
         <Border Grid.Column="1" Background="White" CornerRadius="15,0,0,15" Padding="40" >
             <StackPanel VerticalAlignment="Center">
-
                 <TextBlock Text="Giriş Yap" FontSize="26" FontWeight="Bold" Foreground="#333" Margin="0,0,0,30" HorizontalAlignment="Center"/>
 
                 <TextBlock Text="Kullanıcı Adı" FontWeight="SemiBold" Foreground="#555" />
                 <Border Background="#F4F4F4" BorderBrush="#DDD" BorderThickness="1" CornerRadius="8" Margin="0,5,0,15">
-                    <TextBox Height="35" Padding="10" FontSize="14" Background="Transparent" BorderThickness="0"/>
+                    <TextBox x:Name="TxtUsername" Height="35" Padding="10" FontSize="14" Background="Transparent" BorderThickness="0"
+             Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
                 </Border>
 
                 <TextBlock Text="Şifre" FontWeight="SemiBold" Foreground="#555" />
                 <Border Background="#F4F4F4" BorderBrush="#DDD" BorderThickness="1" CornerRadius="8" Margin="0,5,0,25">
-                    <PasswordBox Height="35" Padding="10" FontSize="14" Background="Transparent" BorderThickness="0"/>
+                    <PasswordBox x:Name="PwdPassword" Height="35" Padding="10" FontSize="14" Background="Transparent" BorderThickness="0" />
                 </Border>
 
                 <Button Content="Giriş Yap" Height="40" Background="#2D2F51" Foreground="White" 
-                    FontWeight="Bold" BorderThickness="0" Cursor="Hand" HorizontalAlignment="Stretch" Click="Button_Click">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}" 
-                                CornerRadius="10" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="{TemplateBinding BorderThickness}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                        FontWeight="Bold" BorderThickness="0" Cursor="Hand" HorizontalAlignment="Stretch" 
+                        Command="{Binding LoginCommand}" Click="Button_Click" />
 
 
 
