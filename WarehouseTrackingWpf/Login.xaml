@@ -49,8 +49,37 @@
                     </Button.Template>
                 </Button>
 
-                <TextBlock Text="Şifreni mi unuttun?" Foreground="#2D2F51" FontSize="12" 
-                       Margin="0,15,0,0" HorizontalAlignment="Center" Cursor="Hand" />
+
+
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Kayıt Ol"
+               Foreground="#2D2F51"
+               FontSize="12"
+               HorizontalAlignment="Left"
+               Cursor="Hand"
+               Grid.Column="0" />
+
+                    <TextBlock Text="|" 
+               FontSize="12" 
+               Foreground="#2D2F51"
+               Grid.Column="1"
+               HorizontalAlignment="Center" />
+
+                    <TextBlock Text="Şifreni mi unuttun?"
+               Foreground="#2D2F51"
+               FontSize="12"
+               HorizontalAlignment="Right"
+               Cursor="Hand"
+               Grid.Column="2" />
+                </Grid>
+
+
             </StackPanel>
         </Border>
     </Grid>
